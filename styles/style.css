@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -35,4 +35,210 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 133px 30px;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+}
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 16px;
+}
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+.search-form__textfield:focus {
+  outline: none;
+}
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  appearance: none;
+  border: none;
+}
+.search-form__textfield {
+  width: 225px;
+  border: none;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: transparent;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.search-form__fieldset-title {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+}
+.search-form__pseudo-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.search-form__pseudo-checkbox::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.search-form__label
+  .search-form__checkbox:checked
+  + .search-form__pseudo-checkbox::before {
+  opacity: 1;
+}
+
+.search-form__label:has(.search-form__pseudo-checkbox):hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.button {
+  color: #fff;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  background-color: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.button:focus {
+  outline: none;
+}
+.button:active {
+  background-color: #545050;
+}
+.button:hover {
+  text-decoration-line: underline;
+}
+.search-form__submit-button {
+  align-self: end;
+  width: 194px;
+  height: 34px;
+}
+.more-button {
+  width: 399px;
+  height: 34px;
+}
+.content__list {
+  position: relative;
+  height: 298px;
+  overflow: auto;
+}
+.content__list-item:not(:last-child) {
+  margin-bottom: 34px;
+}
+.content__details {
+  max-width: 399px;
+  width: 100%;
+  height: 100%;
+}
+.title {
+  padding-bottom: 26px;
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+.content__accent {
+  color: #545050;
+}
+.content__card-link {
+  display: block;
+  margin: 2px;
+  color: #fff;
+  text-decoration: none;
+}
+.content__card-link:active {
+  background-color: #545050;
+}
+.content__card-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.content__card-link:focus {
+  outline: none;
+}
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+.content__video-card {
+  display: flex;
+}
+.content__video-card-title {
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+.content__video-card-description {
+  padding-top: 6px;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+}
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+}
+.content__video-card-description-container {
+  width: 200px;
+  height: 100%;
+}
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
