@@ -41,6 +41,8 @@ ol {
   display: flex;
   justify-content: center;
   gap: 32px;
+	min-height: 100vh;
+	align-content:center;
   padding: 133px 30px;
 }
 .result {
