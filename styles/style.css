@@ -40,8 +40,7 @@ ol {
 .content {
   display: flex;
   justify-content: center;
-	align-content:center;
-	align-items:end;
+	align-items:center;
   gap: 32px;
 	min-height: 100vh;
 	padding: 133px 30px;
