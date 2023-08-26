@@ -9,6 +9,8 @@ html {
 }
 
 .page {
+	display: flex;
+	align-items:center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -40,10 +42,17 @@ ol {
 .content {
   display: flex;
   justify-content: center;
-	align-items:center;
   gap: 32px;
-	min-height: 100vh;
+	height:800px;
 	padding: 133px 30px;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+	justify-content:end;
+	gap: 18px;
+  
+ 
 }
 .result__video-container {
   position: relative;
@@ -59,7 +68,7 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 16px;
+  
 }
 .search-form__checkbox-list {
   display: flex;
